@@ -11,11 +11,14 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    
     "ios": {
+      "jsEngine": "hermes",
       "supportsTablet": true,
       "bundleIdentifier": "com.example.with-camera"
     },
     "android": {
+      "jsEngine": "hermes",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -24,6 +27,23 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "允许应用使用相机",
+          "microphonePermission": "允许应用使用麦克风"
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "允许应用访问您的照片",
+          "savePhotosPermission": "允许应用保存照片",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ]
   }
 }
